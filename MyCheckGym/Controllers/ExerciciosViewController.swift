@@ -13,7 +13,6 @@ class ExerciciosViewController: UIViewController, UITableViewDataSource {
     // MARK: - IBOutlets
     
     @IBOutlet weak var descricaoTextField: UITextField?
-    @IBOutlet weak var musculosTableView: UITableView?
     
     //MARK: - Atributos
     let musculos:[Musculo] = [Musculo("Peitoral"),
@@ -30,7 +29,7 @@ class ExerciciosViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
     }
     
-    //MARK: Table View Data Source
+    //MARK: UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return musculos.count
     }
