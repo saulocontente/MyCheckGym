@@ -10,11 +10,15 @@ import Foundation
 class Exercicio {
     //MARK: - Atributos
     let descricao:String
-    let musculo:String
+    let musculo:Musculo
     
     
     //MARK: - Inicializadores
-    init(descricao:String, musculo:String) {
+    init?() {
+        return nil
+    }
+    
+    init(descricao:String, musculo:Musculo) {
         self.descricao = descricao
         self.musculo = musculo
     }

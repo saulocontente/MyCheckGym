@@ -20,6 +20,7 @@
 		CE90768D28FD5E4600AF5FB1 /* ExerciciosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90768C28FD5E4600AF5FB1 /* ExerciciosViewController.swift */; };
 		CE90768F28FD6D0000AF5FB1 /* Musculo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90768E28FD6D0000AF5FB1 /* Musculo.swift */; };
 		CE9076B128FEF46500AF5FB1 /* ExerciciosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9076B028FEF46500AF5FB1 /* ExerciciosTableViewController.swift */; };
+		CE9076B328FF366D00AF5FB1 /* TreinosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9076B228FF366D00AF5FB1 /* TreinosTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		CE90768C28FD5E4600AF5FB1 /* ExerciciosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciciosViewController.swift; sourceTree = "<group>"; };
 		CE90768E28FD6D0000AF5FB1 /* Musculo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musculo.swift; sourceTree = "<group>"; };
 		CE9076B028FEF46500AF5FB1 /* ExerciciosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciciosTableViewController.swift; sourceTree = "<group>"; };
+		CE9076B228FF366D00AF5FB1 /* TreinosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreinosTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				CE84EBF728F8682F000E53EB /* ViewController.swift */,
 				CE90768C28FD5E4600AF5FB1 /* ExerciciosViewController.swift */,
 				CE9076B028FEF46500AF5FB1 /* ExerciciosTableViewController.swift */,
+				CE9076B228FF366D00AF5FB1 /* TreinosTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				CE90768B28FD5CF000AF5FB1 /* Exercicio.swift in Sources */,
 				CE84EBF428F8682F000E53EB /* AppDelegate.swift in Sources */,
 				CE90768D28FD5E4600AF5FB1 /* ExerciciosViewController.swift in Sources */,
+				CE9076B328FF366D00AF5FB1 /* TreinosTableViewController.swift in Sources */,
 				CE90768F28FD6D0000AF5FB1 /* Musculo.swift in Sources */,
 				CE9076B128FEF46500AF5FB1 /* ExerciciosTableViewController.swift in Sources */,
 				CE84EBF628F8682F000E53EB /* SceneDelegate.swift in Sources */,
