@@ -69,10 +69,13 @@ class ExerciciosViewController: UIViewController, UITableViewDataSource, UITable
     
     // MARK: - Actions
     @IBAction func cadastrar(_ sender: Any) {
-        guard let descricaoExercicio = descricaoTextField?.text else { return }
-        guard let musculoExercicio = musculoSelecionado else { return }
+        guard let descricaoExercicio = descricaoTextField?.text,
+              let musculoExercicio = musculoSelecionado
+        else { return }
         
-        let exercicio = Exercicio(descricao: descricaoExercicio, musculo: musculoExercicio)
+        let exercicio = Exercicio(
+            descricao: descricaoExercicio,
+            musculo: musculoExercicio)
         exerciciosTableViewDelegate?.cadastrar(exercicio)
         navigationController?.popViewController(animated: true)
     }

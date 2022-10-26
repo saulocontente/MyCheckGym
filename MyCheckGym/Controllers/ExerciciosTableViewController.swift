@@ -6,6 +6,9 @@
 //
 
 import UIKit
+protocol IncluirExerciciosDelegate {
+    func incluirExercicios(_ exercicios: [Exercicio])
+}
 
 class ExerciciosTableViewController: UITableViewController, CadastrarExercicioDelegate {
     // MARK: - IBOutlets
@@ -15,8 +18,9 @@ class ExerciciosTableViewController: UITableViewController, CadastrarExercicioDe
     var exercicios = [Exercicio(descricao: "Supino inclinado", musculo: (Musculo("Peitoral"))),
                       Exercicio(descricao: "Supino reto", musculo: (Musculo("Peitoral"))),
                       Exercicio(descricao: "Supino declinado", musculo: (Musculo("Peitoral")))]
-    var exercicioSelecionado:Exercicio? = nil
-    // MARK: - View life cycle
+    var exercicioSelecionado:[Exercicio] = []
+    
+    // MARK: - UITableViewController
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return exercicios.count
     }
@@ -29,25 +33,45 @@ class ExerciciosTableViewController: UITableViewController, CadastrarExercicioDe
         celula.textLabel?.text = exercicio.descricao
         return celula
     }
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let celula = tableView.cellForRow(at: indexPath) else { return }
-        if exercicioSelecionado == nil {
-            if celula.accessoryType == .none {
-                celula.accessoryType = .checkmark
-                exercicioSelecionado = exercicios[indexPath.row]
-            } else {
-                celula.accessoryType = .none
-                exercicioSelecionado = nil
-            }
+        
+        let longPress = UILongPressGestureRecognizer(
+            target: self,
+            action: #selector(mostrarDetalhes(_ :)))
+        celula.addGestureRecognizer(longPress)
+        
+        if celula.accessoryType == .none {
+            celula.accessoryType = .checkmark
+            exercicioSelecionado.append(exercicios[indexPath.row])
         } else {
-            if celula.accessoryType == .checkmark {
-                celula.accessoryType = .none
-                exercicioSelecionado = nil
-            }
+            celula.accessoryType = .none
         }
+        
     }
     
+    @objc func mostrarDetalhes(_ gestureRecognizer:UILongPressGestureRecognizer ) {
+        if gestureRecognizer.state == .began {
+            let celulaView = gestureRecognizer.view as! UITableViewCell
+            guard let indexPath = tableView.indexPath(for: celulaView) else { return }
+            let exercicio = exercicios[indexPath.row]
+            
+            let detalhes = exercicio.detalhes()
+            let mensagem = "Deseja remover este exercicio?"
+            let alerta = UIAlertController(title: detalhes, message: mensagem, preferredStyle: .alert)
+            let botaoCancelar = UIAlertAction(title: "Cancelar", style: .cancel)
+            alerta.addAction(botaoCancelar)
+            let botaoRemover = UIAlertAction(title: "Excluir", style: .destructive, handler: {
+                alerta in
+                self.exercicios.remove(at: indexPath.row)
+                self.tableView.reloadData()
+            })
+            alerta.addAction(botaoRemover)
+            present(alerta, animated: true, completion: nil)
+        }
+    }
+
+    // MARK: - Delegate
     func cadastrar(_ exercicio: Exercicio) {
         exercicios.append(exercicio)
         tableView.reloadData()

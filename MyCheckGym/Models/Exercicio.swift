@@ -22,4 +22,11 @@ class Exercicio {
         self.descricao = descricao
         self.musculo = musculo
     }
+    
+    // MARK: - Metodos
+    func detalhes()-> String {
+        var mensagem = "Exercicio: \(descricao)"
+        mensagem += "\nMusculo: \(musculo.nome)"
+        return mensagem
+    }
 }
