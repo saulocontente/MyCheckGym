@@ -12,13 +12,16 @@ protocol IncluirExerciciosDelegate {
 
 class ExerciciosTableViewController: UITableViewController, CadastrarExercicioDelegate {
     // MARK: - IBOutlets
+    @IBOutlet var exerciciosTableView: UITableView?
     
-    
-    //MARK: - Atributos
-    var exercicios = [Exercicio(descricao: "Supino inclinado", musculo: (Musculo("Peitoral"))),
-                      Exercicio(descricao: "Supino reto", musculo: (Musculo("Peitoral"))),
-                      Exercicio(descricao: "Supino declinado", musculo: (Musculo("Peitoral")))]
+    // MARK: - Atributos
+    var exercicios:[Exercicio] = []
     var exercicioSelecionado:[Exercicio] = []
+    
+    // MARK: - ViewLifeCycle
+    override func viewDidLoad() {
+        exercicios = ExerciciosDAO().recuperaExercicios()
+    }
     
     // MARK: - UITableViewController
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,26 +58,26 @@ class ExerciciosTableViewController: UITableViewController, CadastrarExercicioDe
             let celulaView = gestureRecognizer.view as! UITableViewCell
             guard let indexPath = tableView.indexPath(for: celulaView) else { return }
             let exercicio = exercicios[indexPath.row]
-            
-            let detalhes = exercicio.detalhes()
-            let mensagem = "Deseja remover este exercicio?"
-            let alerta = UIAlertController(title: detalhes, message: mensagem, preferredStyle: .alert)
-            let botaoCancelar = UIAlertAction(title: "Cancelar", style: .cancel)
-            alerta.addAction(botaoCancelar)
-            let botaoRemover = UIAlertAction(title: "Excluir", style: .destructive, handler: {
+            RemoveExercicioViewController(uiViewController: self).exibeAlerta(exercicio, handler: {
                 alerta in
                 self.exercicios.remove(at: indexPath.row)
                 self.tableView.reloadData()
             })
-            alerta.addAction(botaoRemover)
-            present(alerta, animated: true, completion: nil)
+            
         }
     }
 
     // MARK: - Delegate
     func cadastrar(_ exercicio: Exercicio) {
         exercicios.append(exercicio)
-        tableView.reloadData()
+        if let tableView = exerciciosTableView {
+            ExerciciosDAO().salvaExercicios(exercicios)
+            tableView.reloadData()
+            
+        } else {
+            let mensagem = "Erro ao atualizar a lista de exercicios"
+            Alerta(uiViewController: self).exibe(mensagem: mensagem)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

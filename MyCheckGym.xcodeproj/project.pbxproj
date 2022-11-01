@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE5A35D62909664F00D1072A /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A35D52909664F00D1072A /* Alerta.swift */; };
+		CE5A35D8290BD75F00D1072A /* ExerciciosDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A35D7290BD75F00D1072A /* ExerciciosDAO.swift */; };
+		CE5A35DA290D5B8800D1072A /* RemoveExercicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A35D9290D5B8800D1072A /* RemoveExercicioViewController.swift */; };
 		CE84EBF428F8682F000E53EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84EBF328F8682F000E53EB /* AppDelegate.swift */; };
 		CE84EBF628F8682F000E53EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84EBF528F8682F000E53EB /* SceneDelegate.swift */; };
 		CE84EBF828F8682F000E53EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84EBF728F8682F000E53EB /* ViewController.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE5A35D52909664F00D1072A /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
+		CE5A35D7290BD75F00D1072A /* ExerciciosDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciciosDAO.swift; sourceTree = "<group>"; };
+		CE5A35D9290D5B8800D1072A /* RemoveExercicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveExercicioViewController.swift; sourceTree = "<group>"; };
 		CE84EBF028F8682F000E53EB /* MyCheckGym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCheckGym.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE84EBF328F8682F000E53EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE84EBF528F8682F000E53EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +152,8 @@
 				CE90768A28FD5CF000AF5FB1 /* Exercicio.swift */,
 				CE90768E28FD6D0000AF5FB1 /* Musculo.swift */,
 				CE9076B42908892F00AF5FB1 /* Treino.swift */,
+				CE5A35D52909664F00D1072A /* Alerta.swift */,
+				CE5A35D7290BD75F00D1072A /* ExerciciosDAO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,6 +173,7 @@
 				CE90768C28FD5E4600AF5FB1 /* ExerciciosViewController.swift */,
 				CE9076B028FEF46500AF5FB1 /* ExerciciosTableViewController.swift */,
 				CE9076B228FF366D00AF5FB1 /* TreinosTableViewController.swift */,
+				CE5A35D9290D5B8800D1072A /* RemoveExercicioViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -304,8 +313,11 @@
 				CE90768B28FD5CF000AF5FB1 /* Exercicio.swift in Sources */,
 				CE84EBF428F8682F000E53EB /* AppDelegate.swift in Sources */,
 				CE9076B52908892F00AF5FB1 /* Treino.swift in Sources */,
+				CE5A35D8290BD75F00D1072A /* ExerciciosDAO.swift in Sources */,
 				CE90768D28FD5E4600AF5FB1 /* ExerciciosViewController.swift in Sources */,
+				CE5A35DA290D5B8800D1072A /* RemoveExercicioViewController.swift in Sources */,
 				CE9076B328FF366D00AF5FB1 /* TreinosTableViewController.swift in Sources */,
+				CE5A35D62909664F00D1072A /* Alerta.swift in Sources */,
 				CE90768F28FD6D0000AF5FB1 /* Musculo.swift in Sources */,
 				CE9076B128FEF46500AF5FB1 /* ExerciciosTableViewController.swift in Sources */,
 				CE84EBF628F8682F000E53EB /* SceneDelegate.swift in Sources */,

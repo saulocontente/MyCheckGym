@@ -23,9 +23,7 @@ class TreinosTableViewController: UITableViewController, IncluirExerciciosDelega
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         let exercicio = exercicios[indexPath.row]
-        
 
-        
         return cell
     }
     

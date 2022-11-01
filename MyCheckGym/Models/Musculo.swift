@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Musculo {
+class Musculo: NSObject, NSCoding {
     //MARK:- Atributos
     let nome:String
     
@@ -15,5 +15,12 @@ class Musculo {
     init (_ nome:String){
         self.nome = nome
     }
+    //MARK: - NSCoding
+    func encode(with coder: NSCoder) {
+        coder.encode(nome, forKey: "nome")
+    }
     
+    required init?(coder: NSCoder) {
+        nome = coder.decodeObject(forKey: "nome") as! String
+    }
 }
