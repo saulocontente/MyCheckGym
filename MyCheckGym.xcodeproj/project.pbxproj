@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1DEF012926738100E3EC26 /* ExerciciosTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1DEF002926738100E3EC26 /* ExerciciosTableView.xib */; };
 		CE5A35D62909664F00D1072A /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A35D52909664F00D1072A /* Alerta.swift */; };
 		CE5A35D8290BD75F00D1072A /* ExerciciosDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A35D7290BD75F00D1072A /* ExerciciosDAO.swift */; };
 		CE5A35DA290D5B8800D1072A /* RemoveExercicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A35D9290D5B8800D1072A /* RemoveExercicioViewController.swift */; };
@@ -19,11 +20,19 @@
 		CE84EC0B28F86832000E53EB /* MyCheckGymTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84EC0A28F86832000E53EB /* MyCheckGymTests.swift */; };
 		CE84EC1528F86832000E53EB /* MyCheckGymUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84EC1428F86832000E53EB /* MyCheckGymUITests.swift */; };
 		CE84EC1728F86832000E53EB /* MyCheckGymUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84EC1628F86832000E53EB /* MyCheckGymUITestsLaunchTests.swift */; };
+		CE8FEB3D2927EFB700A1ADCB /* ListaTreinosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FEB3B2927EFB700A1ADCB /* ListaTreinosTableViewController.swift */; };
+		CE8FEB402927F03100A1ADCB /* TreinoTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8FEB3F2927F03100A1ADCB /* TreinoTableView.xib */; };
+		CE8FEB422927F1FA00A1ADCB /* TreinoExercicioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8FEB412927F1FA00A1ADCB /* TreinoExercicioTableViewCell.xib */; };
+		CE8FEB442927F35200A1ADCB /* TreinoSerieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8FEB432927F35200A1ADCB /* TreinoSerieTableViewCell.xib */; };
+		CE8FEB4E292CD77F00A1ADCB /* ExerciciosView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8FEB4D292CD77F00A1ADCB /* ExerciciosView.xib */; };
+		CE8FEB50292D604E00A1ADCB /* TreinoExercicioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FEB4F292D604E00A1ADCB /* TreinoExercicioTableViewCell.swift */; };
+		CE8FEB52292D614200A1ADCB /* TreinoSerieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FEB51292D614200A1ADCB /* TreinoSerieTableViewCell.swift */; };
+		CE8FEB542930032A00A1ADCB /* TreinosDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FEB532930032A00A1ADCB /* TreinosDAO.swift */; };
 		CE90768B28FD5CF000AF5FB1 /* Exercicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90768A28FD5CF000AF5FB1 /* Exercicio.swift */; };
 		CE90768D28FD5E4600AF5FB1 /* ExerciciosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90768C28FD5E4600AF5FB1 /* ExerciciosViewController.swift */; };
 		CE90768F28FD6D0000AF5FB1 /* Musculo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90768E28FD6D0000AF5FB1 /* Musculo.swift */; };
 		CE9076B128FEF46500AF5FB1 /* ExerciciosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9076B028FEF46500AF5FB1 /* ExerciciosTableViewController.swift */; };
-		CE9076B328FF366D00AF5FB1 /* TreinosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9076B228FF366D00AF5FB1 /* TreinosTableViewController.swift */; };
+		CE9076B328FF366D00AF5FB1 /* TreinoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9076B228FF366D00AF5FB1 /* TreinoTableViewController.swift */; };
 		CE9076B52908892F00AF5FB1 /* Treino.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9076B42908892F00AF5FB1 /* Treino.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE1DEF002926738100E3EC26 /* ExerciciosTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciciosTableView.xib; sourceTree = "<group>"; };
 		CE5A35D52909664F00D1072A /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
 		CE5A35D7290BD75F00D1072A /* ExerciciosDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciciosDAO.swift; sourceTree = "<group>"; };
 		CE5A35D9290D5B8800D1072A /* RemoveExercicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveExercicioViewController.swift; sourceTree = "<group>"; };
@@ -61,11 +71,19 @@
 		CE84EC1028F86832000E53EB /* MyCheckGymUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCheckGymUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE84EC1428F86832000E53EB /* MyCheckGymUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCheckGymUITests.swift; sourceTree = "<group>"; };
 		CE84EC1628F86832000E53EB /* MyCheckGymUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCheckGymUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE8FEB3B2927EFB700A1ADCB /* ListaTreinosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTreinosTableViewController.swift; sourceTree = "<group>"; };
+		CE8FEB3F2927F03100A1ADCB /* TreinoTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TreinoTableView.xib; sourceTree = "<group>"; };
+		CE8FEB412927F1FA00A1ADCB /* TreinoExercicioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TreinoExercicioTableViewCell.xib; sourceTree = "<group>"; };
+		CE8FEB432927F35200A1ADCB /* TreinoSerieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TreinoSerieTableViewCell.xib; sourceTree = "<group>"; };
+		CE8FEB4D292CD77F00A1ADCB /* ExerciciosView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciciosView.xib; sourceTree = "<group>"; };
+		CE8FEB4F292D604E00A1ADCB /* TreinoExercicioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreinoExercicioTableViewCell.swift; sourceTree = "<group>"; };
+		CE8FEB51292D614200A1ADCB /* TreinoSerieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreinoSerieTableViewCell.swift; sourceTree = "<group>"; };
+		CE8FEB532930032A00A1ADCB /* TreinosDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreinosDAO.swift; sourceTree = "<group>"; };
 		CE90768A28FD5CF000AF5FB1 /* Exercicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercicio.swift; sourceTree = "<group>"; };
 		CE90768C28FD5E4600AF5FB1 /* ExerciciosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciciosViewController.swift; sourceTree = "<group>"; };
 		CE90768E28FD6D0000AF5FB1 /* Musculo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musculo.swift; sourceTree = "<group>"; };
 		CE9076B028FEF46500AF5FB1 /* ExerciciosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciciosTableViewController.swift; sourceTree = "<group>"; };
-		CE9076B228FF366D00AF5FB1 /* TreinosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreinosTableViewController.swift; sourceTree = "<group>"; };
+		CE9076B228FF366D00AF5FB1 /* TreinoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreinoTableViewController.swift; sourceTree = "<group>"; };
 		CE9076B42908892F00AF5FB1 /* Treino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Treino.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +172,7 @@
 				CE9076B42908892F00AF5FB1 /* Treino.swift */,
 				CE5A35D52909664F00D1072A /* Alerta.swift */,
 				CE5A35D7290BD75F00D1072A /* ExerciciosDAO.swift */,
+				CE8FEB532930032A00A1ADCB /* TreinosDAO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +181,11 @@
 			isa = PBXGroup;
 			children = (
 				CE84EBF928F8682F000E53EB /* Main.storyboard */,
+				CE1DEF002926738100E3EC26 /* ExerciciosTableView.xib */,
+				CE8FEB3F2927F03100A1ADCB /* TreinoTableView.xib */,
+				CE8FEB412927F1FA00A1ADCB /* TreinoExercicioTableViewCell.xib */,
+				CE8FEB432927F35200A1ADCB /* TreinoSerieTableViewCell.xib */,
+				CE8FEB4D292CD77F00A1ADCB /* ExerciciosView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,8 +196,11 @@
 				CE84EBF728F8682F000E53EB /* ViewController.swift */,
 				CE90768C28FD5E4600AF5FB1 /* ExerciciosViewController.swift */,
 				CE9076B028FEF46500AF5FB1 /* ExerciciosTableViewController.swift */,
-				CE9076B228FF366D00AF5FB1 /* TreinosTableViewController.swift */,
 				CE5A35D9290D5B8800D1072A /* RemoveExercicioViewController.swift */,
+				CE8FEB3B2927EFB700A1ADCB /* ListaTreinosTableViewController.swift */,
+				CE9076B228FF366D00AF5FB1 /* TreinoTableViewController.swift */,
+				CE8FEB4F292D604E00A1ADCB /* TreinoExercicioTableViewCell.swift */,
+				CE8FEB51292D614200A1ADCB /* TreinoSerieTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -282,8 +309,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8FEB422927F1FA00A1ADCB /* TreinoExercicioTableViewCell.xib in Resources */,
+				CE1DEF012926738100E3EC26 /* ExerciciosTableView.xib in Resources */,
+				CE8FEB442927F35200A1ADCB /* TreinoSerieTableViewCell.xib in Resources */,
 				CE84EC0028F86832000E53EB /* LaunchScreen.storyboard in Resources */,
+				CE8FEB4E292CD77F00A1ADCB /* ExerciciosView.xib in Resources */,
 				CE84EBFD28F86832000E53EB /* Assets.xcassets in Resources */,
+				CE8FEB402927F03100A1ADCB /* TreinoTableView.xib in Resources */,
 				CE84EBFB28F8682F000E53EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,14 +344,18 @@
 				CE84EBF828F8682F000E53EB /* ViewController.swift in Sources */,
 				CE90768B28FD5CF000AF5FB1 /* Exercicio.swift in Sources */,
 				CE84EBF428F8682F000E53EB /* AppDelegate.swift in Sources */,
+				CE8FEB542930032A00A1ADCB /* TreinosDAO.swift in Sources */,
 				CE9076B52908892F00AF5FB1 /* Treino.swift in Sources */,
 				CE5A35D8290BD75F00D1072A /* ExerciciosDAO.swift in Sources */,
 				CE90768D28FD5E4600AF5FB1 /* ExerciciosViewController.swift in Sources */,
 				CE5A35DA290D5B8800D1072A /* RemoveExercicioViewController.swift in Sources */,
-				CE9076B328FF366D00AF5FB1 /* TreinosTableViewController.swift in Sources */,
+				CE8FEB52292D614200A1ADCB /* TreinoSerieTableViewCell.swift in Sources */,
+				CE9076B328FF366D00AF5FB1 /* TreinoTableViewController.swift in Sources */,
 				CE5A35D62909664F00D1072A /* Alerta.swift in Sources */,
 				CE90768F28FD6D0000AF5FB1 /* Musculo.swift in Sources */,
+				CE8FEB3D2927EFB700A1ADCB /* ListaTreinosTableViewController.swift in Sources */,
 				CE9076B128FEF46500AF5FB1 /* ExerciciosTableViewController.swift in Sources */,
+				CE8FEB50292D604E00A1ADCB /* TreinoExercicioTableViewCell.swift in Sources */,
 				CE84EBF628F8682F000E53EB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

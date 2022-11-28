@@ -16,6 +16,7 @@ class ExerciciosViewController: UIViewController, UITableViewDataSource, UITable
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak var listaMusculoTableView: UITableView!
     @IBOutlet weak var descricaoTextField: UITextField?
     
     //MARK: - Atributos
@@ -28,11 +29,22 @@ class ExerciciosViewController: UIViewController, UITableViewDataSource, UITable
                               Musculo("Tríceps"),
                               Musculo("Panturrilha")]
     var musculoSelecionado:Musculo? = nil
-    var exerciciosTableViewDelegate:ExerciciosTableViewController?
+    var delegate:CadastrarExercicioDelegate?
+    
+    init(delegate: CadastrarExercicioDelegate) {
+        super.init(nibName: "ExerciciosView", bundle: nil)
+        self.delegate = delegate
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        listaMusculoTableView.dataSource = self
+        listaMusculoTableView.delegate = self
     }
     
     // MARK: - UITableViewDataSource
@@ -76,7 +88,7 @@ class ExerciciosViewController: UIViewController, UITableViewDataSource, UITable
         let exercicio = Exercicio(
             descricao: descricaoExercicio,
             musculo: musculoExercicio)
-        exerciciosTableViewDelegate?.cadastrar(exercicio)
+        delegate?.cadastrar(exercicio)
         navigationController?.popViewController(animated: true)
     }
 }

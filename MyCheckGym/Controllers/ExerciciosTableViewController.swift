@@ -12,15 +12,35 @@ protocol IncluirExerciciosDelegate {
 
 class ExerciciosTableViewController: UITableViewController, CadastrarExercicioDelegate {
     // MARK: - IBOutlets
-    @IBOutlet var exerciciosTableView: UITableView?
+    @IBOutlet var exerciciosTableView: UITableView!
+    
     
     // MARK: - Atributos
     var exercicios:[Exercicio] = []
-    var exercicioSelecionado:[Exercicio] = []
+    var listaExerciciosSelecionados:[Exercicio]? = []
+    var delegate: IncluirExerciciosDelegate?
+    
+    init(delegate: IncluirExerciciosDelegate) {
+        super.init(nibName: "ExerciciosTableView", bundle: nil)
+        self.delegate = delegate
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     // MARK: - ViewLifeCycle
     override func viewDidLoad() {
         exercicios = ExerciciosDAO().recuperaExercicios()
+        exerciciosTableView.dataSource = self
+        exerciciosTableView.delegate = self
+        let botaoCadastrarExercicio =  UIBarButtonItem(title: "Cadastrar", style: .plain, target: self, action: #selector(cadastrarExercicio))
+        navigationItem.rightBarButtonItem = botaoCadastrarExercicio
+    }
+    
+    @objc func cadastrarExercicio() {
+        let exerciciosViewController = ExerciciosViewController(delegate: self)
+        navigationController?.pushViewController(exerciciosViewController, animated: true)
     }
     
     // MARK: - UITableViewController
@@ -46,11 +66,10 @@ class ExerciciosTableViewController: UITableViewController, CadastrarExercicioDe
         
         if celula.accessoryType == .none {
             celula.accessoryType = .checkmark
-            exercicioSelecionado.append(exercicios[indexPath.row])
+            listaExerciciosSelecionados?.append(exercicios[indexPath.row])
         } else {
             celula.accessoryType = .none
         }
-        
     }
     
     @objc func mostrarDetalhes(_ gestureRecognizer:UILongPressGestureRecognizer ) {
@@ -80,11 +99,15 @@ class ExerciciosTableViewController: UITableViewController, CadastrarExercicioDe
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "cadastrarExercicio" {
-            if let viewController = segue.destination as? ExerciciosViewController {
-                viewController.exerciciosTableViewDelegate = self
-            }
+    //MARK: - Actions
+    
+    @IBAction func incluirNoTreino(_ sender: Any) {
+        if let exercicios = listaExerciciosSelecionados {
+            delegate?.incluirExercicios(exercicios)
+            navigationController?.popViewController(animated: true)
+        } else {
+            return
         }
+        
     }
 }
